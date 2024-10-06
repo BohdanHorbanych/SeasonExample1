@@ -6,7 +6,7 @@ public class SeasonExample {
 
         System.out.print("Enter a month (1-12): ");
         int month = scanner.nextInt();
-        String season = "";
+        var season = "";
 
         switch (month) {
             case 12: case 1: case 2:
