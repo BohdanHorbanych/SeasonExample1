@@ -16,7 +16,7 @@ public class SeasonExample {
     }
 
     private static String getSeason(String input) {
-        String season = "";
+        var season = "";
 
         try {
             int monthNumber = Integer.parseInt(input);
