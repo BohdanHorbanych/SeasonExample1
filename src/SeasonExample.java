@@ -1,33 +1,40 @@
 import java.util.Scanner;
 
 public class SeasonExample {
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Enter a month (1-12): ");
-        int month = scanner.nextInt();
-        var season = "";
+        System.out.print("Enter the month name (for example december, january, ..): ");
+        String month = scanner.nextLine().trim().toLowerCase();
 
+        String season;
         switch (month) {
-            case 12: case 1: case 2:
+            case "december":
+            case "january":
+            case "february":
                 season = "Winter";
                 break;
-            case 3: case 4: case 5:
+            case "march":
+            case "april":
+            case "may":
                 season = "Spring";
                 break;
-            case 6: case 7: case 8:
+            case "june":
+            case "july":
+            case "august":
                 season = "Summer";
                 break;
-            case 9: case 10: case 11:
+            case "september":
+            case "october":
+            case "november":
                 season = "Fall";
                 break;
             default:
-                season = "Invalid month! Please enter a number between 1 and 12.";
-                break;
+                season = "Invalid month! Enter valid month name.";
         }
 
-        System.out.println("Season: " + season);
+        System.out.println("Season is: " + season);
         scanner.close();
     }
 }
-//2
